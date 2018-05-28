@@ -1,21 +1,13 @@
 package client;
 
-import com.google.gson.Gson;
 import db.client.NewESClient;
 import db.client.NewESClientFactory;
-import db.model.Student;
-import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
-import org.elasticsearch.action.search.SearchRequestBuilder;
-import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.sort.SortOrder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,7 +25,6 @@ public class IndexAPI {
         long time1 = System.currentTimeMillis();
         System.out.println("time1为" + time1);
         NewESClientFactory.me().start("elasticsearch", "127.0.0.1:9300");
-
     }
 
     /**
@@ -131,23 +122,7 @@ public class IndexAPI {
         System.out.println(result);
     }
 
-    @Test
-    public void getCount() throws Exception {
 
-        BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery();
-        queryBuilder.must(QueryBuilders.termQuery("name", "student1"));
-        queryBuilder.must(QueryBuilders.termQuery("s2", 1001));
-
-        SearchRequestBuilder searchRequestBuilder = NewESClientFactory.me().getReadOnlyDelegateClient().prepareSearch(indexName);
-        searchRequestBuilder.setTypes(typeName);
-        searchRequestBuilder.setPostFilter(queryBuilder);
-        searchRequestBuilder.setSize(0);
-        searchRequestBuilder.addSort("s1", SortOrder.ASC);
-
-        SearchResponse searchResponse = searchRequestBuilder.get();
-        long result = searchResponse.getHits().totalHits;
-        System.out.println(result);
-    }
 
 
 }

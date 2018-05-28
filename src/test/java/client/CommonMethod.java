@@ -11,7 +11,7 @@ public class CommonMethod {
 
     public static  String getStudentJson() {
         Student student = new Student();
-        student.setName("name123");
+        student.setName("name666");
         student.setS1(1);
         student.setS2(2);
         student.setTime(321123L);
