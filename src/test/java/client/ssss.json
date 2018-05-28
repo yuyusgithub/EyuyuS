@@ -1,17 +1,13 @@
 {
-  "size": 0,
-  "aggregations": {
-    "s1": {
-      "terms": {
-        "field": "s1",
-        "size": 20,
-        "min_doc_count": 1,
-        "shard_min_doc_count": 0,
-        "show_term_doc_count_error": false,
-        "order": {
-          "_key": "desc"
-        }
-      }
-    }
-  }
+  "_shards": {
+    "total": 2,
+    "failed": 0,
+    "successful": 2
+  },
+  "_index": "twitter",
+  "_type": "tweet",
+  "_id": "1",
+  "_version": 1,
+  "created": true,
+  "result": "created"
 }

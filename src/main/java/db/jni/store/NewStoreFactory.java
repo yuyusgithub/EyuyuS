@@ -2,8 +2,8 @@ package db.jni.store;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.rstone.db.client.NewESClient;
-import com.rstone.db.client.NewESClientFactory;
+import db.client.NewESClient;
+import db.client.NewESClientFactory;
 import org.apache.log4j.Logger;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.index.IndexRequest;

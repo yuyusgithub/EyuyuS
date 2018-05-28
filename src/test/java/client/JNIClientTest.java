@@ -1,11 +1,11 @@
 package client;
 
 import com.google.gson.Gson;
-import com.rstone.db.client.NewESClientFactory;
-import com.rstone.db.jni.JNIClient;
-import com.rstone.db.jni.condition.Operation;
-import com.rstone.db.jni.condition.SearchCon;
-import com.rstone.db.model.Student;
+import db.client.NewESClientFactory;
+import db.jni.JNIClient;
+import db.jni.condition.Operation;
+import db.jni.condition.SearchCon;
+import db.model.Student;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;

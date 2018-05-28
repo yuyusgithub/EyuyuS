@@ -1,10 +1,10 @@
 package db.client;
 
-import com.rstone.db.jni.JNIClient;
-import com.rstone.db.jni.condition.SearchCon;
-import com.rstone.db.jni.result.TrendResult;
-import com.rstone.db.model.FlowData;
-import com.rstone.db.model.FlowDataUtils;
+import db.jni.JNIClient;
+import db.jni.condition.SearchCon;
+import db.jni.result.TrendResult;
+import db.model.FlowData;
+import db.model.FlowDataUtils;
 import org.apache.log4j.Logger;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;

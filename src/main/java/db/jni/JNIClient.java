@@ -1,14 +1,14 @@
 package db.jni;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rstone.db.client.NewESClientFactory;
-import com.rstone.db.jni.condition.AggCon;
-import com.rstone.db.jni.condition.Operation;
-import com.rstone.db.jni.condition.SearchCon;
-import com.rstone.db.jni.result.AggResult;
-import com.rstone.db.jni.result.MultiTrendResult;
-import com.rstone.db.jni.result.TrendResult;
-import com.rstone.db.jni.store.NewStoreFactory;
+import db.client.NewESClientFactory;
+import db.jni.condition.AggCon;
+import db.jni.condition.Operation;
+import db.jni.condition.SearchCon;
+import db.jni.result.AggResult;
+import db.jni.result.MultiTrendResult;
+import db.jni.result.TrendResult;
+import db.jni.store.NewStoreFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.elasticsearch.action.admin.indices.get.GetIndexResponse;
