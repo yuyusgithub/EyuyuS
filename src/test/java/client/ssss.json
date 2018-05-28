@@ -1,13 +1,43 @@
 {
+  "took": 3,
+  "timed_out": false,
   "_shards": {
-    "total": 2,
-    "failed": 0,
-    "successful": 2
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
   },
-  "_index": "twitter",
-  "_type": "tweet",
-  "_id": "1",
-  "_version": 1,
-  "created": true,
-  "result": "created"
+  "_clusters": {
+    "total": 0,
+    "successful": 0,
+    "skipped": 0
+  },
+  "hits": {
+    "total": 1,
+    "max_score": null,
+    "hits": [
+      {
+        "_shard": "[students][3]",
+        "_node": "aVr156JOShi1ippxtLlnzA",
+        "_index": "students",
+        "_type": "student",
+        "_id": "1",
+        "_score": null,
+        "_source": {
+          "name": "name666",
+          "s1": 1,
+          "s2": 2,
+          "time": 321123
+        },
+        "sort": [
+          1
+        ],
+        "_explanation": {
+          "value": 1.0,
+          "description": "s2:[2 TO 2]",
+          "details": []
+        }
+      }
+    ]
+  }
 }

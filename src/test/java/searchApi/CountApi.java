@@ -32,7 +32,7 @@ public class CountApi {
         //配置查询条件
         BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery();
         queryBuilder.must(QueryBuilders.termQuery("name", "student1"));
-        queryBuilder.must(QueryBuilders.termQuery("s2", 1001));
+        queryBuilder.must(QueryBuilders.termQuery("s2", 1));
 
         SearchRequestBuilder searchRequestBuilder = NewESClientFactory.me().getReadOnlyDelegateClient().prepareSearch(indexName);
         searchRequestBuilder.setTypes(typeName);
