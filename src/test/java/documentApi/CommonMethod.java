@@ -1,4 +1,4 @@
-package client;
+package documentApi;
 
 import com.google.gson.Gson;
 import db.model.Student;

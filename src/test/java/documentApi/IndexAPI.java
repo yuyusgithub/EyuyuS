@@ -1,4 +1,4 @@
-package client;
+package documentApi;
 
 import db.client.NewESClient;
 import db.client.NewESClientFactory;
