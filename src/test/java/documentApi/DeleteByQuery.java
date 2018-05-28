@@ -26,8 +26,12 @@ public class DeleteByQuery {
     }
 
 
+    /**
+     * 跟并发有关，还没看完
+     *
+     */
     @Test
-    public  void ssss(){
+    public  void deleteByQuery(){
 
         //获取客户端
         NewESClient client = NewESClientFactory.me().getReadOnlyDelegateClient();
