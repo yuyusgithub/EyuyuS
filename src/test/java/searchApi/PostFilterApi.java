@@ -52,7 +52,6 @@ public class PostFilterApi {
         //配置查询条件
         BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery();
         queryBuilder.must(QueryBuilders.termQuery("s2", 2));
-        queryBuilder.filter(QueryBuilders.termQuery("s2", 2));
         SearchResponse searchResponse = searchRequestBuilder.setQuery(queryBuilder).get();
         SearchHits hits = searchResponse.getHits();
         for (SearchHit hit : hits) {
